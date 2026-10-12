@@ -3,238 +3,205 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>FitLive - Cardápio</title>
-    <meta name="description" content="Explore o cardápio da FitLive com opções de refeições saudáveis, equilibradas e transparentes.">
+    <title>Cardápio | FitLive</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA==" crossorigin="anonymous" referrerpolicy="no-referrer">
-    <link rel="shortcut icon" href="../assets/img/Logo.jpg" type="image/x-icon">]
     <link rel="stylesheet" href="../styles/styles/cardapio.css">
     <script src="../js/cardapio.js" defer></script>
 </head>
 <body>
-    <div class="app-layout">
-        <aside class="sidebar" aria-label="Navegação lateral">
-            <div class="sidebar-logo">
-                <i class="fa-solid fa-leaf" aria-hidden="true"></i>
-                <span class="logo-text">FitLive</span>
-            </div>
-            <nav class="sidebar-nav" aria-label="Navegação principal">
-                <a href="home.html" class="nav-item">
-                    <i class="fa-solid fa-house" aria-hidden="true"></i>
-                    <span>Início</span>
-                </a>
-                <a href="cardapio.html" class="nav-item active" aria-current="page">
-                    <i class="fa-solid fa-utensils" aria-hidden="true"></i>
-                    <span>Cardápio</span>
-                </a>
-                <a href="pedidos.html" class="nav-item">
-                    <i class="fa-solid fa-bag-shopping" aria-hidden="true"></i>
-                    <span>Pedidos</span>
-                </a>
-                <a href="perfil.html" class="nav-item">
-                    <i class="fa-solid fa-user" aria-hidden="true"></i>
-                    <span>Perfil</span>
-                </a>
-            </nav>
-        </aside>
-
-        <div class="main-wrapper">
-            <header class="top-header">
-                <div class="header-welcome">
-                    <h1 class="welcome-heading">Comida de verdade, preço transparente.</h1>
-                    <p class="welcome-subtext">Escolha suas refeições saudáveis favoritas para o dia a dia.</p>
-                </div>
-                <div class="header-actions">
-                    <button type="button" class="notification-btn" aria-label="Notificações">
-                        <i class="fa-regular fa-bell" aria-hidden="true"></i>
-                    </button>
-                    <div class="user-avatar-container">
-                        <img src="" alt="Foto de perfil do usuário">
-                    </div>
-                </div>
-            </header>
-
-            <main class="dashboard-content">
-                <section class="menu-intro-section">
-                    <p>Todas as nossas opções são preparadas com ingredientes frescos, selecionados e pensados para equilibrar sabor e nutrição na sua rotina.</p>
-                </section>
-
-                <section class="menu-products-section">
-                    <div class="products-grid">
-                        <article class="product-card">
-                            <div class="product-image">
-                                <img src="" alt="Frango grelhado acompanhado de arroz integral e brócolis fresco">
-                            </div>
-                            <div class="product-info">
-                                <h2>Frango grelhado + arroz integral + brócolis</h2>
-                                <p class="product-description">Filé de frango suculento grelhado à perfeição, servido com arroz integral nutritivo e floretes de brócolis cozidos no ponto ideal.</p>
-                                <span class="product-price">R$ 21,50</span>
-                                <div class="nutrition-container">
-                                    <p class="nutrition-disclaimer">Estimativa nutricional ilustrativa — valores não verificados</p>
-                                    <table class="nutrition-table" aria-label="Tabela nutricional estimada para Frango grelhado, arroz integral e brócolis">
-                                        <caption>Informação Nutricional (Estimativa)</caption>
-                                        <thead>
-                                            <tr>
-                                                <th>Energia</th>
-                                                <th>Carboidratos</th>
-                                                <th>Proteínas</th>
-                                                <th>Gorduras Totais</th>
-                                                <th>Gorduras Saturadas</th>
-                                                <th>Fibras</th>
-                                                <th>Sódio</th>
-                                            </tr>
-                                        </thead>
-                                        <tbody>
-                                            <tr>
-                                                <td>300 kcal</td>
-                                                <td>120 gramas de Frango</td>
-                                                <td>100 gramas de arroz integral</td>
-                                                <td>80 gramas de brócolis</td>
-                                            </tr>
-                                        </tbody>
-                                    </table>
-                                </div>
-                                <button type="button" class="btn-add-cart">Adicionar ao pedido</button>
-                            </div>
-                        </article>
-
-                        <article class="product-card">
-                            <div class="product-image">
-                                <img src="" alt="Peixe grelhado acompanhado de purê e legumes selecionados">
-                            </div>
-                            <div class="product-info">
-                                <h2>Peixe grelhado + purê + legumes</h2>
-                                <p class="product-description">Filé de peixe leve e macio, acompanhado de um purê cremoso reconfortante e uma seleção de legumes frescos da estação.</p>
-                                <span class="product-price">R$ 25,90</span>
-                                <div class="nutrition-container">
-                                    <p class="nutrition-disclaimer">Estimativa nutricional ilustrativa — valores não verificados</p>
-                                    <table class="nutrition-table" aria-label="Tabela nutricional estimada para Peixe grelhado, purê e legumes">
-                                        <caption>Informação Nutricional (Estimativa)</caption>
-                                        <thead>
-                                            <tr>
-                                                <th>Energia</th>
-                                                <th>Carboidratos</th>
-                                                <th>Proteínas</th>
-                                                <th>Gorduras Totais</th>
-                                                <th>Gorduras Saturadas</th>
-                                                <th>Fibras</th>
-                                                <th>Sódio</th>
-                                            </tr>
-                                        </thead>
-                                        <tbody>
-                                            <tr>
-                                                <td>280 kcal</td>
-                                                <td>120 gramas de Peixe</td>
-                                                <td>100 gramas de arroz integral</td>
-                                                <td>50 gramas de brócolis</td>
-                                            </tr>
-                                        </tbody>
-                                    </table>
-                                </div>
-                                <button type="button" class="btn-add-cart">Adicionar ao pedido</button>
-                            </div>
-                        </article>
-
-                        <article class="product-card">
-                            <div class="product-image">
-                                <img src="" alt="Frango com batata-doce e salada verde fresca">
-                            </div>
-                            <div class="product-info">
-                                <h2>Frango + batata-doce + salada</h2>
-                                <p class="product-description">A clássica combinação fitness com frango magro grelhado, batata-doce energética e uma salada verde fresca e crocante.</p>
-                                <span class="product-price">R$ 22,90</span>
-                                <div class="nutrition-container">
-                                    <p class="nutrition-disclaimer">Estimativa nutricional ilustrativa — valores não verificados</p>
-                                    <table class="nutrition-table" aria-label="Tabela nutricional estimada para Frango, batata-doce e salada">
-                                        <caption>Informação Nutricional (Estimativa)</caption>
-                                        <thead>
-                                            <tr>
-                                                <th>Energia</th>
-                                                <th>Carboidratos</th>
-                                                <th>Proteínas</th>
-                                                <th>Gorduras Totais</th>
-                                                <th>Gorduras Saturadas</th>
-                                                <th>Fibras</th>
-                                                <th>Sódio</th>
-                                            </tr>
-                                        </thead>
-                                        <tbody>
-                                            <tr>
-                                                <td>290 kcal</td>
-                                                <td>120 gramas de frango</td>
-                                                <td>80 gramas de batata doce</td>
-                                                <td>300 gramas de alface e tomate</td>
-                                            </tr>
-                                        </tbody>
-                                    </table>
-                                </div>
-                                <button type="button" class="btn-add-cart">Adicionar ao pedido</button>
-                            </div>
-                        </article>
-
-                        <article class="product-card">
-                            <div class="product-image">
-                                <img src="" alt="Marmita vegetariana do dia com ingredientes frescos e variados">
-                            </div>
-                            <div class="product-info">
-                                <h2>Marmita vegetariana do dia</h2>
-                                <p class="product-description">Uma deliciosa marmita para quem prefere evitar sofrimento animal composta por proteina de soja ao molho vermelho, arroz integral, e salada de rucula. Atenção: os ingredientes podem variar conforme a opção disponível no dia.</p>
-                                <span class="product-price">R$ 21,90</span>
-                                <div class="nutrition-container">
-                                    <p class="nutrition-disclaimer">Estimativa nutricional ilustrativa — valores não verificados</p>
-                                    <table class="nutrition-table" aria-label="Tabela nutricional estimada para Marmita vegetariana do dia">
-                                        <caption>Informação Nutricional (Estimativa)</caption>
-                                        <thead>
-                                            <tr>
-                                                <th>Energia</th>
-                                                <th>Carboidratos</th>
-                                                <th>Proteínas</th>
-                                                <th>Gorduras Totais</th>
-                                                <th>Gorduras Saturadas</th>
-                                                <th>Fibras</th>
-                                                <th>Sódio</th>
-                                            </tr>
-                                        </thead>
-                                        <tbody>
-                                            <tr>
-                                                <td>320 kcal</td>
-                                                <td>130 gramas de proteina de soja ao molho</td>
-                                                <td>100 gramas de arroz integral</td>
-                                                <td>50 gramas de rucula fresca</td>
-                                            </tr>
-                                        </tbody>
-                                    </table>
-                                </div>
-                                <button type="button" class="btn-add-cart">Adicionar ao pedido</button>
-                            </div>
-                        </article>
-
-                        <article class="product-card">
-                            <div class="product-image">
-                                <img src="" alt="Fatia de cheesecake de amora cremosa e saborosa">
-                            </div>
-                            <div class="product-info">
-                                <h2>Cheesecake de amora</h2>
-                                <p class="product-description">Sobremesa cremosa e equilibrada, combinando uma base delicada com cobertura artesanal de amoras frescas.</p>
-                                <span class="product-price">R$ 21,50</span>
-                                <button type="button" class="btn-add-cart">Adicionar ao pedido</button>
-                            </div>
-                        </article>
-
-                        <article class="product-card">
-                            <div class="product-image">
-                                <img src="" alt="Brownie artesanal com textura macia e sabor marcante de chocolate">
-                            </div>
-                            <div class="product-info">
-                                <h2>Brownie</h2>
-                                <p class="product-description">Brownie artesanal com textura rica e macia, feito para matar aquela vontade de doce sem pesar na consciência.</p>
-                                <span class="product-price">R$ 21,50</span>
-                                <button type="button" class="btn-add-cart">Adicionar ao pedido</button>
-                            </div>
-                        </article>
-                    </div>
-                </section>
-            </main>
+    <aside aria-label="Navegação lateral">
+        <div>
+            <img src="../assets/img/Logo.jpg" alt="Logotipo FitLive: Comida saudável, vida melhor">
         </div>
-    </div>
+        <nav aria-label="Navegação principal">
+            <ul>
+                <li><a href="home.html"><i class="fa-solid fa-house" aria-hidden="true"></i> Início</a></li>
+                <li><a href="cardapio.html" aria-current="page"><i class="fa-solid fa-utensils" aria-hidden="true"></i> Cardápio</a></li>
+                <li><a href="pedidos.html"><i class="fa-solid fa-bag-shopping" aria-hidden="true"></i> Pedidos</a></li>
+                <li><a href="perfil.html"><i class="fa-solid fa-user" aria-hidden="true"></i> Perfil</a></li>
+            </ul>
+        </nav>
+        <div>
+            <p>Escolhas melhores hoje, mais saúde amanhã.</p>
+        </div>
+    </aside>
+
+    <main>
+        <header>
+            <div>
+                <p>NOSSO CARDÁPIO</p>
+                <h1>Comida de verdade, preço transparente.</h1>
+                <p>Marmitas completas para rotinas reais — com opções para diferentes gostos e escolhas alimentares.</p>
+                <nav aria-label="Filtros de categorias">
+                    <ul>
+                        <li><button type="button">Todas</button></li>
+                        <li><button type="button">Marmitas</button></li>
+                        <li><button type="button">Vegetarianas</button></li>
+                        <li><button type="button">Sobremesas</button></li>
+                    </ul>
+                </nav>
+            </div>
+            <figure>
+                <img src="" alt="Pratos variados de refeições saudáveis FitLive em destaque">
+            </figure>
+        </header>
+
+        <section>
+            <h2>Seleção principal</h2>
+            
+            <article>
+                <figure>
+                    <img src="../assets/img/Frango grelahado.jpeg" alt="Marmita de frango grelhado com arroz integral e brócolis">
+                </figure>
+                <div>
+                    <h3>Frango grelhado + arroz integral + brócolis</h3>
+                    <p>Marmita com frango grelhado, arroz integral e brócolis.</p>
+                    <p>R$ 21,50</p>
+                    <span>Marmita</span>
+                    <button type="button">Ver detalhes</button>
+                </div>
+            </article>
+
+            <article>
+                <figure>
+                    <img src="../assets/img/Peixe grelhado.jpeg" alt="Marmita de peixe grelhado com purê e legumes">
+                </figure>
+                <div>
+                    <h3>Peixe grelhado + purê + legumes</h3>
+                    <p>Marmita com peixe grelhado, purê e legumes.</p>
+                    <p>R$ 25,90</p>
+                    <span>Marmita</span>
+                    <button type="button">Ver detalhes</button>
+                </div>
+            </article>
+
+            <article>
+                <figure>
+                    <img src="../assets/img/fragno com batata doce.jpeg" alt="Marmita de frango com batata-doce e salada">
+                </figure>
+                <div>
+                    <h3>Frango + batata-doce + salada</h3>
+                    <p>Marmita com frango, batata-doce e salada.</p>
+                    <p>R$ 22,90</p>
+                    <span>Marmita</span>
+                    <button type="button">Ver detalhes</button>
+                </div>
+            </article>
+
+            <article>
+                <figure>
+                    <img src="../assets/img/vgetariana.jpeg" alt="Marmita vegetariana do dia">
+                </figure>
+                <div>
+                    <h3>Marmita vegetariana do dia</h3>
+                    <p>Proteina de soja ao molho com arroz integral e salada verde.</p>
+                    <p>R$ 21,90</p>
+                    <span>Vegetariana</span>
+                    <button type="button">Ver detalhes</button>
+                </div>
+            </article>
+
+            <article>
+                <figure>
+                    <img src="../assets/img/chessecake.jpeg" alt="Fatia de cheesecake de amora">
+                </figure>
+                <div>
+                    <h3>Cheesecake de amora</h3>
+                    <p>Cheesecake de amora proteico e sem lactsose.</p>
+                    <p>R$ 21,50</p>
+                    <span>Sobremesa</span>
+                    <button type="button">Ver detalhes</button>
+                </div>
+            </article>
+
+            <article>
+                <figure>
+                    <img src="../assets/img/brownie.jpeg" alt="Brownie FitLive">
+                </figure>
+                <div>
+                    <h3>Brownie</h3>
+                    <p>Brownie proteico sem glutem e sem lactose e zero açúcar.</p>
+                    <p>R$ 21,50</p>
+                    <span>Sobremesa</span>
+                    <button type="button">Ver detalhes</button>
+                </div>
+            </article>
+        </section>
+
+        <section aria-label="Detalhes do produto selecionado">
+            <div>
+                <button type="button" aria-label="Fechar detalhes"><i class="fa-solid fa-xmark" aria-hidden="true"></i></button>
+                <figure>
+                    <img src="" alt="Detalhe da marmita de frango grelhado, arroz integral e brócolis em embalagem">
+                </figure>
+                <div>
+                    <h2>Frango grelhado</h2>
+                    <p>Arroz integral e brócolis</p>
+                    <p>R$ 21,50</p>
+                    <span>Marmita</span>
+                    <p>Uma combinação clássica e nutritiva, com frango grelhado, arroz integral e brócolis frescos. Ideal para quem busca uma refeição leve, equilibrada e cheia de sabor.</p>
+                    <p><i class="fa-regular fa-clock" aria-hidden="true"></i> Porção: 350g (aprox.)</p>
+                    <p><i class="fa-solid fa-triangle-exclamation" aria-hidden="true"></i> Alergênicos: Contém glúten.</p>
+                    <button type="button"><i class="fa-solid fa-cart-shopping" aria-hidden="true"></i> Adicionar ao pedido</button>
+                </div>
+
+                <div>
+                    <h3>Informações nutricionais</h3>
+                    <p>Os valores nutricionais são estimativas e podem variar de acordo com a receita e o tamanho da porção.</p>
+                    <table>
+                        <caption>Tabela de informação nutricional (Estimativa)</caption>
+                        <tbody>
+                            <tr>
+                                <th>Valor energético</th>
+                                <td>335 kcal</td>
+                            </tr>
+                            <tr>
+                                <th>Carboidratos</th>
+                                <td>45 g</td>
+                            </tr>
+                            <tr>
+                                <th>Proteínas</th>
+                                <td>32 g</td>
+                            </tr>
+                            <tr>
+                                <th>Gorduras totais</th>
+                                <td>10 g</td>
+                            </tr>
+                            <tr>
+                                <th>Gorduras saturadas</th>
+                                <td>3 g</td>
+                            </tr>
+                            <tr>
+                                <th>Fibras alimentares</th>
+                                <td>6 g</td>
+                            </tr>
+                            <tr>
+                                <th>Sódio</th>
+                                <td>420 mg</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+
+                <div>
+                    <h3>Ingredientes</h3>
+                    <p>Frango grelhado, arroz integral e brócolis.</p>
+                </div>
+            </div>
+        </section>
+
+        <section>
+            <div>
+                <div>
+                    <h2>Mais saúde no seu dia a dia</h2>
+                    <p>Refeições práticas, saborosas e feitas para o seu bem-estar.</p>
+                    <button type="button">Conheça nossa proposta</button>
+                </div>
+                <figure>
+                    <img src="../assets/img/Banner FitLive_ Saúde no Dia a Dia.png" alt="Ilustração de pratos saudáveis e ingredientes frescos FitLive">
+                </figure>
+            </div>
+        </section>
+    </main>
 </body>
 </html>
