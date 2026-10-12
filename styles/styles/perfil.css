@@ -1,0 +1,460 @@
+@import url(../global.css);
+
+body {
+  background-color: var(--color-background);
+  color: var(--color-text);
+  font-family: var(--font-primary);
+  margin: 0;
+  display: flex;
+  min-height: 100vh;
+}
+
+aside[aria-label="Navegação lateral"] {
+  width: 260px;
+  background-color: var(--color-primary);
+  color: var(--color-surface);
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  padding: 32px 24px;
+  position: fixed;
+  top: 0;
+  left: 0;
+  height: 100vh;
+  z-index: 10;
+  box-shadow: var(--shadow-md);
+}
+
+aside[aria-label="Navegação lateral"] > div:first-child {
+  margin-bottom: 32px;
+}
+
+aside[aria-label="Navegação lateral"] img {
+  max-width: 140px;
+  height: auto;
+}
+
+aside[aria-label="Navegação lateral"] nav ul {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+aside[aria-label="Navegação lateral"] nav a {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  padding: 14px 16px;
+  border-radius: var(--radius-8);
+  color: rgba(255, 255, 255, 0.7);
+  font-weight: 500;
+  font-size: 15px;
+  transition: background-color var(--transition-fast), color var(--transition-fast);
+}
+
+aside[aria-label="Navegação lateral"] nav a i {
+  font-size: 18px;
+  width: 20px;
+  text-align: center;
+}
+
+aside[aria-label="Navegação lateral"] nav a:hover {
+  background-color: rgba(255, 255, 255, 0.05);
+  color: var(--color-surface);
+}
+
+aside[aria-label="Navegação lateral"] nav a[aria-current="page"] {
+  background-color: var(--color-secondary);
+  color: var(--color-accent);
+}
+
+aside[aria-label="Navegação lateral"] > div:last-child {
+  font-size: 13px;
+  color: rgba(255, 255, 255, 0.6);
+  line-height: 1.4;
+}
+
+main {
+  margin-left: 260px;
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  background-color: var(--color-background);
+  min-height: 100vh;
+  padding: 40px 48px;
+  gap: 32px;
+  max-width: 1400px;
+}
+
+main > header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: var(--color-surface);
+  border-radius: var(--radius-16);
+  padding: 24px 32px;
+  box-shadow: var(--shadow-sm);
+  border: var(--border-width-1) solid rgba(36, 49, 43, 0.08);
+}
+
+main > header h1 {
+  font-family: var(--font-heading);
+  font-size: 24px;
+  color: var(--color-primary);
+}
+
+main > header > div:last-child {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+}
+
+main > header button {
+  background-color: var(--color-background);
+  color: var(--color-secondary);
+  font-weight: 600;
+  font-size: 14px;
+  padding: 8px 16px;
+  border-radius: 20px;
+  border: var(--border-width-1) solid rgba(36, 49, 43, 0.1);
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  transition: background-color var(--transition-fast), color var(--transition-fast);
+}
+
+main > header button:hover {
+  background-color: var(--color-secondary);
+  color: var(--color-surface);
+}
+
+main > header > div:last-child > div {
+  width: 44px;
+  height: 44px;
+  border-radius: 50%;
+  overflow: hidden;
+  background-color: var(--color-background);
+  border: var(--border-width-1) solid rgba(36, 49, 43, 0.1);
+}
+
+main > header > div:last-child > div img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+main > section[aria-label="Resumo do perfil do usuário"] {
+  background-color: var(--color-surface);
+  border-radius: var(--radius-16);
+  box-shadow: var(--shadow-sm);
+  border: var(--border-width-1) solid rgba(36, 49, 43, 0.08);
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+}
+
+main > section[aria-label="Resumo do perfil do usuário"] > div:first-child {
+  position: relative;
+  padding: 24px 32px;
+  display: flex;
+  align-items: flex-end;
+  gap: 24px;
+}
+
+main > section[aria-label="Resumo do perfil do usuário"] > div:first-child > figure {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 140px;
+  background-color: var(--color-secondary);
+  z-index: 1;
+  overflow: hidden;
+}
+
+main > section[aria-label="Resumo do perfil do usuário"] > div:first-child > figure img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  opacity: 0.4;
+}
+
+main > section[aria-label="Resumo do perfil do usuário"] > div:first-child > div {
+  position: relative;
+  z-index: 2;
+  display: flex;
+  align-items: flex-end;
+  gap: 24px;
+  width: 100%;
+  margin-top: 60px;
+}
+
+main > section[aria-label="Resumo do perfil do usuário"] > div:first-child > div > figure {
+  width: 110px;
+  height: 110px;
+  border-radius: 50%;
+  border: 4px solid var(--color-surface);
+  overflow: hidden;
+  background-color: var(--color-background);
+  flex-shrink: 0;
+  box-shadow: var(--shadow-sm);
+}
+
+main > section[aria-label="Resumo do perfil do usuário"] > div:first-child > div > figure img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+main > section[aria-label="Resumo do perfil do usuário"] > div:first-child > div h2 {
+  font-family: var(--font-heading);
+  font-size: 20px;
+  color: var(--color-primary);
+}
+
+main > section[aria-label="Resumo do perfil do usuário"] > div:first-child > div p {
+  font-size: 14px;
+  color: var(--color-secondary);
+}
+
+main > section[aria-label="Resumo do perfil do usuário"] > div:first-child > div p:nth-of-type(2),
+main > section[aria-label="Resumo do perfil do usuário"] > div:first-child > div p:nth-of-type(3) {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  margin-right: 16px;
+  font-size: 13px;
+  color: rgba(36, 49, 43, 0.7);
+}
+
+main > section[aria-label="Resumo do perfil do usuário"] nav {
+  background-color: rgba(33, 77, 56, 0.04);
+  padding: 0 32px;
+  border-top: var(--border-width-1) solid rgba(36, 49, 43, 0.06);
+}
+
+main > section[aria-label="Resumo do perfil do usuário"] nav ul {
+  list-style: none;
+  display: flex;
+  gap: 32px;
+}
+
+main > section[aria-label="Resumo do perfil do usuário"] nav a {
+  display: inline-block;
+  padding: 16px 4px;
+  font-weight: 600;
+  font-size: 14px;
+  color: var(--color-secondary);
+  border-bottom: 2px solid transparent;
+  transition: color var(--transition-fast), border-color var(--transition-fast);
+}
+
+main > section[aria-label="Resumo do perfil do usuário"] nav a:hover {
+  color: var(--color-primary);
+}
+
+main > section[aria-label="Resumo do perfil do usuário"] nav a[aria-current="page"] {
+  color: var(--color-primary);
+  border-color: var(--color-primary);
+}
+
+main > section#dados-pessoais,
+main > section#endereco-entrega {
+  background-color: var(--color-surface);
+  border-radius: var(--radius-16);
+  padding: 32px;
+  box-shadow: var(--shadow-sm);
+  border: var(--border-width-1) solid rgba(36, 49, 43, 0.08);
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+}
+
+main > section#dados-pessoais > div:first-child,
+main > section#endereco-entrega > div:first-child {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  border-bottom: var(--border-width-1) solid rgba(36, 49, 43, 0.08);
+  padding-bottom: 16px;
+}
+
+main > section#dados-pessoais h2,
+main > section#endereco-entrega h2 {
+  font-family: var(--font-heading);
+  font-size: 18px;
+  color: var(--color-primary);
+  margin-bottom: 4px;
+}
+
+main > section#dados-pessoais p,
+main > section#endereco-entrega p {
+  font-size: 13px;
+  color: rgba(36, 49, 43, 0.7);
+}
+
+main > section#dados-pessoais button,
+main > section#endereco-entrega button {
+  background-color: var(--color-background);
+  color: var(--color-secondary);
+  border: var(--border-width-1) solid rgba(36, 49, 43, 0.15);
+  padding: 8px 16px;
+  border-radius: var(--radius-8);
+  font-weight: 600;
+  font-size: 13px;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  transition: background-color var(--transition-fast), color var(--transition-fast);
+}
+
+main > section#dados-pessoais button:hover,
+main > section#endereco-entrega button:hover {
+  background-color: var(--color-secondary);
+  color: var(--color-surface);
+}
+
+main dl {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 20px 32px;
+}
+
+main dl div {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+
+main dl dt {
+  font-size: 12px;
+  font-weight: 700;
+  color: rgba(36, 49, 43, 0.6);
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+
+main dl dd {
+  font-size: 15px;
+  font-weight: 500;
+  color: var(--color-text);
+}
+
+main > section[aria-label="Aviso de segurança e ações"] {
+  background-color: rgba(33, 77, 56, 0.08);
+  border-radius: var(--radius-16);
+  padding: 24px 32px;
+  border: var(--border-width-1) solid rgba(33, 77, 56, 0.15);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 24px;
+}
+
+main > section[aria-label="Aviso de segurança e ações"] p {
+  font-size: 14px;
+  color: var(--color-secondary);
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  font-weight: 500;
+}
+
+main > section[aria-label="Aviso de segurança e ações"] button {
+  background-color: var(--color-secondary);
+  color: var(--color-surface);
+  font-weight: 700;
+  padding: 12px 24px;
+  border-radius: var(--radius-8);
+  font-size: 14px;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  transition: background-color var(--transition-fast);
+  flex-shrink: 0;
+}
+
+main > section[aria-label="Aviso de segurança e ações"] button:hover {
+  background-color: var(--color-primary);
+}
+
+@media (max-width: 1024px) {
+  aside[aria-label="Navegação lateral"] {
+    width: 80px;
+    padding: 24px 12px;
+  }
+
+  aside[aria-label="Navegação lateral"] img,
+  aside[aria-label="Navegação lateral"] nav a span,
+  aside[aria-label="Navegação lateral"] > div:last-child {
+    display: none;
+  }
+
+  aside[aria-label="Navegação lateral"] > div:first-child {
+    display: flex;
+    justify-content: center;
+  }
+
+  aside[aria-label="Navegação lateral"] nav a {
+    justify-content: center;
+    padding: 14px;
+  }
+
+  main {
+    margin-left: 80px;
+    padding: 32px 24px;
+  }
+}
+
+@media (max-width: 768px) {
+  aside[aria-label="Navegação lateral"] {
+    display: none;
+  }
+
+  main {
+    margin-left: 0;
+    padding: 20px 16px;
+    gap: 20px;
+  }
+
+  main > section[aria-label="Resumo do perfil do usuário"] > div:first-child {
+    padding: 16px 20px;
+  }
+
+  main > section[aria-label="Resumo do perfil do usuário"] > div:first-child > div {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 16px;
+  }
+
+  main > section[aria-label="Resumo do perfil do usuário"] nav {
+    padding: 0 20px;
+  }
+
+  main > section[aria-label="Resumo do perfil do usuário"] nav ul {
+    gap: 16px;
+    overflow-x: auto;
+  }
+
+  main > section#dados-pessoais,
+  main > section#endereco-entrega {
+    padding: 20px;
+  }
+
+  main dl {
+    grid-template-columns: 1fr;
+    gap: 16px;
+  }
+
+  main > section[aria-label="Aviso de segurança e ações"] {
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 20px;
+  }
+
+  main > section[aria-label="Aviso de segurança e ações"] button {
+    width: 100%;
+    justify-content: center;
+  }
+}

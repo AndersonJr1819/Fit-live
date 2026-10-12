@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Perfil | FitLive</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA==" crossorigin="anonymous" referrerpolicy="no-referrer">
+    <link rel="shortcut icon" href="../assets/img/Logo.jpg" type="image/x-icon">
+    <link rel="stylesheet" href="../styles/styles/perfil.css">
+    <script src="../js/perfil.js" defer></script>
+</head>
+<body>
+    <aside aria-label="Navegação lateral">
+        <div>
+            <img src="../assets/img/Logo.jpg" alt="Logotipo FitLive: Comida saudável, vida melhor">
+        </div>
+        <nav aria-label="Navegação principal">
+            <ul>
+                <li><a href="home.html"><i class="fa-solid fa-house" aria-hidden="true"></i> Home</a></li>
+                <li><a href="cardapio.html"><i class="fa-solid fa-utensils" aria-hidden="true"></i> Cardápio</a></li>
+                <li><a href="pedidos.html"><i class="fa-solid fa-bag-shopping" aria-hidden="true"></i> Pedidos</a></li>
+                <li><a href="perfil.html" aria-current="page"><i class="fa-solid fa-user" aria-hidden="true"></i> Perfil</a></li>
+            </ul>
+        </nav>
+        <div>
+            <p>Comida boa também é cuidado com você.</p>
+        </div>
+    </aside>
+
+    <main>
+        <header>
+            <div>
+                <h1>Meu perfil</h1>
+            </div>
+            <div>
+                <button type="button" aria-label="Notificações"><i class="fa-regular fa-bell" aria-hidden="true"></i> Notificações</button>
+                <div>
+                    <img src="../assets/img/IMG-20260908-WA0002.jpg" alt="Avatar do usuário logado">
+                </div>
+            </div>
+        </header>
+
+        <section aria-label="Resumo do perfil do usuário">
+            <div>
+                <div>
+                    <figure>
+                        <img src="../assets/img/IMG-20260908-WA0002.jpg" alt="Foto ou avatar do usuário">
+                    </figure>
+                    <h2>Guilherme silva de jesus</h2>
+                    <p>guilhermesilvajesussilva@gmail.com</p>
+                    <p><i class="fa-solid fa-phone" aria-hidden="true"></i> (11) 97827-1389</p>
+                    <p><i class="fa-regular fa-calendar" aria-hidden="true"></i></p>
+                </div>
+            </div>
+
+            <nav aria-label="Navegação interna do perfil">
+                <ul>
+                    <li><a href="#dados-pessoais" aria-current="page">Dados pessoais</a></li>
+                    <li><a href="#endereco-entrega">Endereço de entrega</a></li>
+                    <li><a href="recuperacao.html">Alterar senha</a></li>
+                </ul>
+            </nav>
+        </section>
+
+        <section id="dados-pessoais">
+            <div>
+                <div>
+                    <h2>Dados pessoais</h2>
+                    <p>Mantenha suas informações sempre atualizadas.</p>
+                </div>
+                <button type="button"><i class="fa-solid fa-pen" aria-hidden="true"></i> Editar</button>
+            </div>
+
+            <dl>
+                <div>
+                    <dt>Guilherme silva de jesus</dt>
+                    <dd>G.silva</dd>
+                </div>
+                <div>
+                    <dt>Data de nascimento</dt>
+                    <dd>05 de março de 2009</dd>
+                </div>
+                <div>
+                    <dt>E-mail</dt>
+                    <dd>guilhermesilvajesussilva@gmail.com</dd>
+                </div>
+                <div>
+                    <dt>Senha</dt>
+                    <dd>••••••••</dd>
+                </div>
+                <div>
+                    <dt>Celular</dt>
+                    <dd>(11) 97827-1389</dd>
+                </div>
+            </dl>
+        </section>
+
+        <section id="endereco-entrega">
+            <div>
+                <div>
+                    <h2>Endereço de entrega</h2>
+                    <p>Informe o endereço onde deseja receber seus pedidos.</p>
+                </div>
+                <button type="button"><i class="fa-solid fa-pen" aria-hidden="true"></i> Editar</button>
+            </div>
+
+            <dl>
+                <div>
+                    <dt>CEP</dt>
+                    <dd>00000-000</dd>
+                </div>
+                <div>
+                    <dt>Número</dt>
+                    <dd>123</dd>
+                </div>
+                <div>
+                    <dt>Endereço</dt>
+                    <dd>Rua Exemplo, 123</dd>
+                </div>
+                <div>
+                    <dt>Cidade</dt>
+                    <dd>São Paulo</dd>
+                </div>
+                <div>
+                    <dt>Bairro</dt>
+                    <dd>Centro</dd>
+                </div>
+                <div>
+                    <dt>Estado</dt>
+                    <dd>SP</dd>
+                </div>
+            </dl>
+        </section>
+
+        <section aria-label="Aviso de segurança e ações">
+            <div>
+                <p><i class="fa-solid fa-shield-halved" aria-hidden="true"></i> Seus dados estão seguros. Utilizamos medidas de segurança para proteger suas informações.</p>
+            </div>
+            <div>
+                <button type="button"><i class="fa-solid fa-check" aria-hidden="true"></i> Salvar alterações</button>
+            </div>
+        </section>
+    </main>
+</body>
+</html>
