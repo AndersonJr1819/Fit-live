@@ -95,3 +95,62 @@ color: var(--color-primary);
 outline: var(--border-width-2) solid var(--color-secondary);
 outline-offset: 2px;
 }
+
+@media (max-width: 1024px) {
+  aside[aria-label="Navegação lateral"] {
+    width: 80px;
+    padding: 24px 12px;
+  }
+
+  aside[aria-label="Navegação lateral"] img,
+  aside[aria-label="Navegação lateral"] nav a span,
+  aside[aria-label="Navegação lateral"] > div:last-child {
+    display: none;
+  }
+
+  aside[aria-label="Navegação lateral"] > div:first-child {
+    display: flex;
+    justify-content: center;
+  }
+
+  aside[aria-label="Navegação lateral"] nav a {
+    justify-content: center;
+    padding: 14px;
+  }
+
+  main {
+    margin-left: 80px;
+    padding: 24px 16px;
+    max-width: 100%;
+  }
+}
+
+@media (max-width: 768px) {
+  aside[aria-label="Navegação lateral"] {
+    width: 260px;
+    display: flex;
+  }
+
+  aside[aria-label="Navegação lateral"] img,
+  aside[aria-label="Navegação lateral"] nav a span,
+  aside[aria-label="Navegação lateral"] > div:last-child {
+    display: block;
+  }
+
+  aside[aria-label="Navegação lateral"] nav a {
+    justify-content: flex-start;
+    padding: 14px 16px;
+  }
+
+  aside[aria-label="Navegação lateral"] > div:first-child {
+    justify-content: flex-start;
+  }
+
+  main {
+    margin-left: 0;
+    padding: 16px 12px;
+    width: 100%;
+    max-width: 100%;
+    overflow-x: hidden;
+  }
+}

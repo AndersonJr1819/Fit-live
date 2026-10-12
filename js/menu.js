@@ -29,6 +29,7 @@ document.addEventListener("DOMContentLoaded", () => {
     menuToggle.setAttribute("aria-expanded", isExpanded ? "true" : "false");
     menuToggle.setAttribute("aria-label", isExpanded ? "Fechar menu de navegação" : "Abrir menu de navegação");
     sidebar.classList.toggle("menu-open", isExpanded);
+    document.body.classList.toggle("menu-open-active", isExpanded);
 
     const icon = menuToggle.querySelector("i");
     if (icon) {
