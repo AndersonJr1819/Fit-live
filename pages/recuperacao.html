@@ -5,36 +5,35 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Recuperar Senha | FitLive</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA==" crossorigin="anonymous" referrerpolicy="no-referrer">
-    <link rel="shortcut icon" href="../assets/img/Logo.jpg" type="image/x-icon">
     <link rel="stylesheet" href="../styles/styles/recuperar.css">
     <script src="../js/recuperacao.js" defer></script>
+    <link rel="shortcut icon" href="../assets/img/Logo.jpg" type="image/x-icon">
 </head>
 <body>
-    <aside aria-label="Navegação lateral">
-        <div>
-            <span>FitLive</span>
-        </div>
-        <div>
-            <p>Comida boa também é cuidado com você.</p>
-        </div>
-    </aside>
-
     <main>
         <section aria-labelledby="recovery-title">
             <div>
                 <span>FitLive</span>
             </div>
+            
             <h1 id="recovery-title">Recuperar senha</h1>
-            <p>Digite seu e-mail cadastrado para receber as instruções de recuperação de senha.</p>
+            <p>Digite o e-mail cadastrado na sua conta.<br>Enviaremos um link para você redefinir sua senha.</p>
 
             <form>
                 <div>
-                    <label for="email"><i class="fa-solid fa-envelope" aria-hidden="true"></i> E-mail</label>
-                    <input type="email" id="email" name="email" placeholder="Digite seu e-mail" autocomplete="email" required>
+                    <label for="email">E-mail</label>
+                    <div>
+                        <i class="fa-solid fa-envelope" aria-hidden="true"></i>
+                        <input type="email" id="email" name="email" placeholder="Digite seu e-mail" autocomplete="email" required>
+                    </div>
                 </div>
 
                 <button type="submit">Enviar link de recuperação</button>
             </form>
+
+            <div>
+                <span>ou</span>
+            </div>
 
             <div>
                 <a href="../index.html"><i class="fa-solid fa-arrow-left" aria-hidden="true"></i> Voltar para o login</a>
