@@ -1,0 +1,506 @@
+@import url(../global.css);
+
+body {
+  background-color: var(--color-background);
+  color: var(--color-text);
+  font-family: var(--font-primary);
+  margin: 0;
+  display: flex;
+  min-height: 100vh;
+}
+
+aside[aria-label="Navegação lateral"] {
+  width: 260px;
+  background-color: var(--color-primary);
+  color: var(--color-surface);
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  padding: 32px 24px;
+  position: fixed;
+  top: 0;
+  left: 0;
+  height: 100vh;
+  z-index: 10;
+  box-shadow: var(--shadow-md);
+}
+
+aside[aria-label="Navegação lateral"] > div:first-child {
+  margin-bottom: 32px;
+}
+
+aside[aria-label="Navegação lateral"] img {
+  max-width: 140px;
+  height: auto;
+}
+
+aside[aria-label="Navegação lateral"] nav ul {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+aside[aria-label="Navegação lateral"] nav a {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  padding: 14px 16px;
+  border-radius: var(--radius-8);
+  color: rgba(255, 255, 255, 0.7);
+  font-weight: 500;
+  font-size: 15px;
+  transition: background-color var(--transition-fast), color var(--transition-fast);
+}
+
+aside[aria-label="Navegação lateral"] nav a i {
+  font-size: 18px;
+  width: 20px;
+  text-align: center;
+}
+
+aside[aria-label="Navegação lateral"] nav a:hover {
+  background-color: rgba(255, 255, 255, 0.05);
+  color: var(--color-surface);
+}
+
+aside[aria-label="Navegação lateral"] nav a[aria-current="page"] {
+  background-color: var(--color-secondary);
+  color: var(--color-accent);
+}
+
+aside[aria-label="Navegação lateral"] > div:last-child {
+  font-size: 13px;
+  color: rgba(255, 255, 255, 0.6);
+  line-height: 1.4;
+}
+
+main {
+  margin-left: 260px;
+  margin-right: 380px;
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  background-color: var(--color-background);
+  min-height: 100vh;
+  padding: 40px 48px;
+  gap: 32px;
+}
+
+main > header {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+main > header > p:first-child {
+  font-size: 12px;
+  font-weight: 700;
+  color: var(--color-secondary);
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+
+main > header h1 {
+  font-family: var(--font-heading);
+  font-size: 32px;
+  color: var(--color-primary);
+  line-height: 1.2;
+}
+
+main > header > p:last-child {
+  font-size: 15px;
+  color: var(--color-secondary);
+}
+
+main > section[aria-labelledby="history-title"] {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+main > section[aria-labelledby="history-title"] > h2 {
+  font-family: var(--font-heading);
+  font-size: 20px;
+  color: var(--color-primary);
+  margin-bottom: 4px;
+}
+
+main > section[aria-labelledby="history-title"] article {
+  background-color: var(--color-surface);
+  border-radius: var(--radius-16);
+  padding: 20px 24px;
+  box-shadow: var(--shadow-sm);
+  border: var(--border-width-1) solid rgba(36, 49, 43, 0.08);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 20px;
+  transition: transform var(--transition-fast), box-shadow var(--transition-fast);
+}
+
+main > section[aria-labelledby="history-title"] article:hover {
+  transform: translateY(-2px);
+  box-shadow: var(--shadow-md);
+}
+
+main > section[aria-labelledby="history-title"] article figure {
+  width: 72px;
+  height: 72px;
+  border-radius: var(--radius-8);
+  overflow: hidden;
+  background-color: var(--color-background);
+  flex-shrink: 0;
+}
+
+main > section[aria-labelledby="history-title"] article figure img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+
+main > section[aria-labelledby="history-title"] article > div:nth-of-type(1) {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+
+main > section[aria-labelledby="history-title"] article h3 {
+  font-family: var(--font-heading);
+  font-size: 16px;
+  color: var(--color-primary);
+}
+
+main > section[aria-labelledby="history-title"] article > div:nth-of-type(1) p {
+  font-size: 13px;
+  color: var(--color-secondary);
+  line-height: 1.4;
+}
+
+main > section[aria-labelledby="history-title"] article > div:nth-of-type(2) {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 6px;
+  min-width: 130px;
+}
+
+main > section[aria-labelledby="history-title"] article > div:nth-of-type(2) span {
+  font-size: 12px;
+  font-weight: 700;
+  padding: 4px 10px;
+  border-radius: var(--radius-4);
+  display: inline-block;
+}
+
+main > section[aria-labelledby="history-title"] article:nth-of-type(1) span {
+  background-color: rgba(184, 216, 107, 0.25);
+  color: var(--color-secondary);
+}
+
+main > section[aria-labelledby="history-title"] article:nth-of-type(2) span,
+main > section[aria-labelledby="history-title"] article:nth-of-type(3) span {
+  background-color: rgba(33, 77, 56, 0.12);
+  color: var(--color-secondary);
+}
+
+main > section[aria-labelledby="history-title"] article:nth-of-type(4) span {
+  background-color: rgba(245, 158, 11, 0.15);
+  color: #B45309;
+}
+
+main > section[aria-labelledby="history-title"] article:nth-of-type(5) span {
+  background-color: rgba(239, 68, 68, 0.12);
+  color: #DC2626;
+}
+
+main > section[aria-labelledby="history-title"] article time {
+  font-size: 12px;
+  color: rgba(36, 49, 43, 0.6);
+  display: flex;
+  align-items: center;
+  gap: 6px;
+}
+
+main > section[aria-labelledby="history-title"] article > div:nth-of-type(3) {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  gap: 2px;
+  min-width: 100px;
+}
+
+main > section[aria-labelledby="history-title"] article > div:nth-of-type(3) span:first-child {
+  font-size: 12px;
+  color: rgba(36, 49, 43, 0.6);
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+
+main > section[aria-labelledby="history-title"] article > div:nth-of-type(3) span:last-child {
+  font-family: var(--font-heading);
+  font-size: 16px;
+  color: var(--color-primary);
+}
+
+main > section[aria-labelledby="history-title"] article button {
+  background-color: var(--color-background);
+  color: var(--color-primary);
+  border: var(--border-width-1) solid rgba(36, 49, 43, 0.2);
+  padding: 10px 16px;
+  border-radius: var(--radius-8);
+  font-weight: 600;
+  font-size: 13px;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  transition: background-color var(--transition-fast), border-color var(--transition-fast), color var(--transition-fast);
+  flex-shrink: 0;
+}
+
+main > section[aria-labelledby="history-title"] article button:hover {
+  background-color: var(--color-secondary);
+  color: var(--color-surface);
+  border-color: var(--color-secondary);
+}
+
+main > section[aria-label="Detalhes do pedido selecionado"] {
+  display: none;
+}
+
+aside[aria-label="Painel complementar"] {
+  width: 360px;
+  position: fixed;
+  top: 0;
+  right: 0;
+  height: 100vh;
+  background-color: var(--color-surface);
+  border-left: var(--border-width-1) solid rgba(36, 49, 43, 0.08);
+  padding: 40px 32px;
+  display: flex;
+  flex-direction: column;
+  gap: 32px;
+  overflow-y: auto;
+  z-index: 5;
+}
+
+aside[aria-label="Painel complementar"] > section:first-of-type {
+  background-color: var(--color-primary);
+  color: var(--color-surface);
+  border-radius: var(--radius-16);
+  padding: 24px;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  box-shadow: var(--shadow-sm);
+}
+
+aside[aria-label="Painel complementar"] > section:first-of-type figure {
+  width: 100%;
+  height: 140px;
+  border-radius: var(--radius-8);
+  overflow: hidden;
+  background-color: rgba(255, 255, 255, 0.05);
+}
+
+aside[aria-label="Painel complementar"] > section:first-of-type figure img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+
+aside[aria-label="Painel complementar"] > section:first-of-type h2 {
+  font-family: var(--font-heading);
+  font-size: 20px;
+  color: var(--color-surface);
+  line-height: 1.2;
+}
+
+aside[aria-label="Painel complementar"] > section:first-of-type p {
+  font-size: 13px;
+  color: rgba(255, 255, 255, 0.85);
+}
+
+aside[aria-label="Painel complementar"] > section:first-of-type a {
+  background-color: var(--color-accent);
+  color: var(--color-primary);
+  font-weight: 700;
+  padding: 10px 16px;
+  border-radius: var(--radius-8);
+  font-size: 13px;
+  text-align: center;
+  transition: filter var(--transition-fast);
+  margin-top: 4px;
+}
+
+aside[aria-label="Painel complementar"] > section:first-of-type a:hover {
+  filter: brightness(0.95);
+}
+
+aside[aria-label="Painel complementar"] > section[aria-labelledby="summary-title"] {
+  background-color: var(--color-background);
+  border-radius: var(--radius-16);
+  padding: 24px;
+  border: var(--border-width-1) solid rgba(36, 49, 43, 0.08);
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+aside[aria-label="Painel complementar"] > section[aria-labelledby="summary-title"] h2 {
+  font-family: var(--font-heading);
+  font-size: 18px;
+  color: var(--color-primary);
+}
+
+aside[aria-label="Painel complementar"] > section[aria-labelledby="summary-title"] > div:first-of-type {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+aside[aria-label="Painel complementar"] > section[aria-labelledby="summary-title"] > div:first-of-type > div {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+}
+
+aside[aria-label="Painel complementar"] > section[aria-labelledby="summary-title"] > div:first-of-type > div i {
+  font-size: 20px;
+  color: var(--color-secondary);
+  width: 24px;
+  text-align: center;
+}
+
+aside[aria-label="Painel complementar"] > section[aria-labelledby="summary-title"] > div:first-of-type > div div {
+  display: flex;
+  flex-direction: column;
+}
+
+aside[aria-label="Painel complementar"] > section[aria-labelledby="summary-title"] > div:first-of-type > div span:first-child {
+  font-weight: 700;
+  font-size: 15px;
+  color: var(--color-primary);
+}
+
+aside[aria-label="Painel complementar"] > section[aria-labelledby="summary-title"] > div:first-of-type > div span:last-child {
+  font-size: 13px;
+  color: rgba(36, 49, 43, 0.6);
+}
+
+aside[aria-label="Painel complementar"] > section[aria-labelledby="summary-title"] > div:last-of-type {
+  background-color: rgba(184, 216, 107, 0.15);
+  border-radius: var(--radius-8);
+  padding: 16px;
+  display: flex;
+  gap: 12px;
+  align-items: flex-start;
+  border: var(--border-width-1) solid rgba(184, 216, 107, 0.3);
+}
+
+aside[aria-label="Painel complementar"] > section[aria-labelledby="summary-title"] > div:last-of-type i {
+  color: var(--color-secondary);
+  font-size: 16px;
+  margin-top: 2px;
+}
+
+aside[aria-label="Painel complementar"] > section[aria-labelledby="summary-title"] > div:last-of-type p {
+  font-size: 13px;
+  color: var(--color-secondary);
+  line-height: 1.4;
+}
+
+body > a:first-child {
+  position: absolute;
+  top: -40px;
+  left: 0;
+  background: var(--color-primary);
+  color: var(--color-surface);
+  padding: 8px;
+  z-index: 100;
+}
+
+body > a:first-child:focus {
+  top: 0;
+}
+
+@media (max-width: 1200px) {
+  main {
+    margin-right: 0;
+  }
+
+  aside[aria-label="Painel complementar"] {
+    position: relative;
+    width: 100%;
+    height: auto;
+    border-left: none;
+    border-top: var(--border-width-1) solid rgba(36, 49, 43, 0.08);
+  }
+}
+
+@media (max-width: 1024px) {
+  aside[aria-label="Navegação lateral"] {
+    width: 80px;
+    padding: 24px 12px;
+  }
+
+  aside[aria-label="Navegação lateral"] img,
+  aside[aria-label="Navegação lateral"] nav a span,
+  aside[aria-label="Navegação lateral"] > div:last-child {
+    display: none;
+  }
+
+  aside[aria-label="Navegação lateral"] > div:first-child {
+    display: flex;
+    justify-content: center;
+  }
+
+  aside[aria-label="Navegação lateral"] nav a {
+    justify-content: center;
+    padding: 14px;
+  }
+
+  main {
+    margin-left: 80px;
+    padding: 32px 24px;
+  }
+}
+
+@media (max-width: 768px) {
+  aside[aria-label="Navegação lateral"] {
+    display: none;
+  }
+
+  main {
+    margin-left: 0;
+    padding: 20px 16px;
+    gap: 24px;
+  }
+
+  main > section[aria-labelledby="history-title"] article {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 16px;
+  }
+
+  main > section[aria-labelledby="history-title"] article figure {
+    width: 100%;
+    height: 140px;
+  }
+
+  main > section[aria-labelledby="history-title"] article > div:nth-of-type(2),
+  main > section[aria-labelledby="history-title"] article > div:nth-of-type(3) {
+    width: 100%;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  main > section[aria-labelledby="history-title"] article button {
+    width: 100%;
+    justify-content: center;
+  }
+}
