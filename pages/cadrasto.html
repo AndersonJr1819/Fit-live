@@ -1,0 +1,199 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cadastro | FitLive</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA==" crossorigin="anonymous" referrerpolicy="no-referrer">
+    <link rel="stylesheet" href="../styles/styles/cadrasto.css">
+    <script src="../js/cadrasto.js" defer></script>
+    <link rel="shortcut icon" href="../assets/img/Logo.jpg" type="image/x-icon">
+</head>
+<body>
+    <aside>
+        <div>
+            <img src="../assets/img/Logo.jpg" alt="Logotipo FitLive: Comida saudável, vida melhor">
+            <p>Comida saudável, vida melhor.</p>
+        </div>
+        <div>
+            <p>CADASTRO</p>
+            <h1>Junte-se à nossa comunidade e cuide de você!</h1>
+            <p>Faça seu cadastro e tenha acesso a refeições saudáveis, práticas e saborosas, além de acompanhar seus pedidos e muito mais.</p>
+            
+            <ul>
+                <li>
+                    <div>
+                        <i class="fa-solid fa-seedling" aria-hidden="true"></i>
+                        <h3>Refeições equilibradas</h3>
+                        <p>Mais energia para o seu dia.</p>
+                    </div>
+                </li>
+                <li>
+                    <div>
+                        <i class="fa-solid fa-bolt" aria-hidden="true"></i>
+                        <h3>Praticidade</h3>
+                        <p>Do seu jeito, no seu ritmo.</p>
+                    </div>
+                </li>
+                <li>
+                    <div>
+                        <i class="fa-solid fa-shield-halved" aria-hidden="true"></i>
+                        <h3>Compra segura</h3>
+                        <p>Seus dados protegidos.</p>
+                    </div>
+                </li>
+            </ul>
+        </div>
+        <figure>
+            <img src="" alt="Prato saudável com frango grelhado, arroz integral e legumes frescos FitLive">
+        </figure>
+    </aside>
+
+    <main>
+        <div>
+            <p>Já tem uma conta? <a href="../index.html">Entrar</a></p>
+        </div>
+
+        <section>
+            <h2>Crie sua conta</h2>
+            <p>Preencha os dados abaixo para começar sua jornada com a FitLive.</p>
+
+            <form>
+                <fieldset>
+                    <div>
+                        <label for="nome"><i class="fa-solid fa-user" aria-hidden="true"></i> Nome completo *</label>
+                        <div>
+                            <input type="text" id="nome" name="nome" placeholder="Digite seu nome completo" required autocomplete="name">
+                        </div>
+                    </div>
+
+                    <div>
+                        <label for="email"><i class="fa-solid fa-envelope" aria-hidden="true"></i> E-mail *</label>
+                        <div>
+                            <input type="email" id="email" name="email" placeholder="exemplo@dominio.com" required autocomplete="email">
+                        </div>
+                    </div>
+
+                    <div>
+                        <label for="celular"><i class="fa-solid fa-phone" aria-hidden="true"></i> Celular *</label>
+                        <div>
+                            <input type="tel" id="celular" name="celular" placeholder="(00) 00000-0000" required autocomplete="tel">
+                        </div>
+                    </div>
+
+                    <div>
+                        <label for="nascimento"><i class="fa-regular fa-calendar" aria-hidden="true"></i> Data de nascimento *</label>
+                        <div>
+                            <input type="date" id="nascimento" name="nascimento" placeholder="dd/mm/aaaa" required autocomplete="bday">
+                        </div>
+                    </div>
+
+                    <div>
+                        <label for="senha"><i class="fa-solid fa-lock" aria-hidden="true"></i> Senha *</label>
+                        <div>
+                            <input type="password" id="senha" name="senha" placeholder="Crie uma senha segura" required autocomplete="new-password">
+                        </div>
+                    </div>
+
+                    <div>
+                        <label for="confirmar-senha"><i class="fa-solid fa-lock" aria-hidden="true"></i> Confirmar senha *</label>
+                        <div>
+                            <input type="password" id="confirmar-senha" name="confirmar-senha" placeholder="Repita sua senha" required autocomplete="new-password">
+                        </div>
+                    </div>
+                </fieldset>
+
+                <fieldset>
+                    <legend>Endereço de entrega</legend>
+
+                    <div>
+                        <label for="cep"><i class="fa-solid fa-location-dot" aria-hidden="true"></i> CEP *</label>
+                        <div>
+                            <input type="text" id="cep" name="cep" placeholder="00000-000" required autocomplete="postal-code">
+                        </div>
+                    </div>
+
+                    <div>
+                        <label for="endereco"><i class="fa-solid fa-house" aria-hidden="true"></i> Endereço *</label>
+                        <div>
+                            <input type="text" id="endereco" name="endereco" placeholder="Rua, Avenida, etc." required autocomplete="street-address">
+                        </div>
+                    </div>
+
+                    <div>
+                        <label for="numero"><i class="fa-solid fa-hashtag" aria-hidden="true"></i> Número *</label>
+                        <div>
+                            <input type="text" id="numero" name="numero" placeholder="N°" required autocomplete="address-line2">
+                        </div>
+                    </div>
+
+                    <div>
+                        <label for="bairro"><i class="fa-solid fa-map" aria-hidden="true"></i> Bairro *</label>
+                        <div>
+                            <input type="text" id="bairro" name="bairro" placeholder="Bairro" required autocomplete="address-level3">
+                        </div>
+                    </div>
+
+                    <div>
+                        <label for="cidade"><i class="fa-solid fa-city" aria-hidden="true"></i> Cidade *</label>
+                        <div>
+                            <input type="text" id="cidade" name="cidade" placeholder="Digite sua cidade" required autocomplete="address-level2">
+                        </div>
+                    </div>
+
+                    <div>
+                        <label for="estado"><i class="fa-solid fa-map-location-dot" aria-hidden="true"></i> Estado *</label>
+                        <div>
+                            <select id="estado" name="estado" required autocomplete="address-level1">
+                                <option value="" disabled selected>Selecione o estado</option>
+                                <option value="AC">Acre</option>
+                                <option value="AL">Alagoas</option>
+                                <option value="AP">Amapá</option>
+                                <option value="AM">Amazonas</option>
+                                <option value="BA">Bahia</option>
+                                <option value="CE">Ceará</option>
+                                <option value="DF">Distrito Federal</option>
+                                <option value="ES">Espírito Santo</option>
+                                <option value="GO">Goiás</option>
+                                <option value="MA">Maranhão</option>
+                                <option value="MT">Mato Grosso</option>
+                                <option value="MS">Mato Grosso do Sul</option>
+                                <option value="MG">Minas Gerais</option>
+                                <option value="PA">Pará</option>
+                                <option value="PB">Paraíba</option>
+                                <option value="PR">Paraná</option>
+                                <option value="PE">Pernambuco</option>
+                                <option value="PI">Piauí</option>
+                                <option value="RJ">Rio de Janeiro</option>
+                                <option value="RN">Rio Grande do Norte</option>
+                                <option value="RS">Rio Grande do Sul</option>
+                                <option value="RO">Rondônia</option>
+                                <option value="RR">Roraima</option>
+                                <option value="SC">Santa Catarina</option>
+                                <option value="SP">São Paulo</option>
+                                <option value="SE">Sergipe</option>
+                                <option value="TO">Tocantins</option>
+                            </select>
+                        </div>
+                    </div>
+                </fieldset>
+
+                <div>
+                    <input type="checkbox" id="termos" name="termos" required>
+                    <label for="termos">Li e aceito os <a href="termos.html">Termos de Uso</a> e a <a href="privacidade.html">Política de Privacidade</a></label>
+                </div>
+
+                <button type="submit"><i class="fa-solid fa-user-plus" aria-hidden="true"></i> Cadastrar</button>
+            </form>
+
+            <div>
+                <p>Ou cadastre-se com</p>
+                <div>
+                    <button type="button"><i class="fa-brands fa-google" aria-hidden="true"></i> Google</button>
+                    <button type="button"><i class="fa-brands fa-apple" aria-hidden="true"></i> Apple</button>
+                </div>
+            </div>
+        </section>
+    </main>
+</body>
+</html>

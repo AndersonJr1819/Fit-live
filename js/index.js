@@ -30,7 +30,7 @@ document.addEventListener("DOMContentLoaded", () => {
         return;
       }
 
-      window.location.href = "";
+      window.location.href = "../home.html";
     });
   }
 });
