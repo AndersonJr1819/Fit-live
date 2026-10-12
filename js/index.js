@@ -30,7 +30,7 @@ document.addEventListener("DOMContentLoaded", () => {
         return;
       }
 
-      window.location.href = "../pages/hoem.html";
+      window.location.href = "";
     });
   }
 });
