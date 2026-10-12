@@ -30,7 +30,7 @@ document.addEventListener("DOMContentLoaded", () => {
         return;
       }
 
-      console.info("A funcionalidade de autenticação ainda não está conectada a um serviço real.");
+      window.location.href = "../pages/hoem.html";
     });
   }
 });
