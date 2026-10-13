@@ -168,7 +168,6 @@ main#main-content > section[aria-labelledby="history-title"] article > div:nth-o
   font-size: 14px;
   color: rgba(36, 49, 43, 0.7);
   display: -webkit-box;
-  -webkit-line-clamp: 2;
   -webkit-box-orient: vertical;
   overflow: hidden;
 }
