@@ -1,11 +1,10 @@
 @import url(../global.css);
 
 body {
+  display: flex;
   background-color: var(--color-background);
   color: var(--color-text);
   font-family: var(--font-primary);
-  margin: 0;
-  display: flex;
   min-height: 100vh;
 }
 
@@ -16,7 +15,7 @@ aside[aria-label="Navegação lateral"] {
   display: flex;
   flex-direction: column;
   justify-content: space-between;
-  padding: 32px 24px;
+  padding: var(--space-32) var(--space-24);
   position: fixed;
   top: 0;
   left: 0;
@@ -25,11 +24,7 @@ aside[aria-label="Navegação lateral"] {
   box-shadow: var(--shadow-md);
 }
 
-aside[aria-label="Navegação lateral"] > div:first-child {
-  margin-bottom: 32px;
-}
-
-aside[aria-label="Navegação lateral"] img {
+aside[aria-label="Navegação lateral"] > div:first-child img {
   max-width: 140px;
   height: auto;
 }
@@ -38,14 +33,14 @@ aside[aria-label="Navegação lateral"] nav ul {
   list-style: none;
   display: flex;
   flex-direction: column;
-  gap: 8px;
+  gap: var(--space-8);
 }
 
 aside[aria-label="Navegação lateral"] nav a {
   display: flex;
   align-items: center;
-  gap: 16px;
-  padding: 14px 16px;
+  gap: var(--space-16);
+  padding: 14px var(--space-16);
   border-radius: var(--radius-8);
   color: rgba(255, 255, 255, 0.7);
   font-weight: 500;
@@ -69,303 +64,285 @@ aside[aria-label="Navegação lateral"] nav a[aria-current="page"] {
   color: var(--color-accent);
 }
 
-aside[aria-label="Navegação lateral"] > div:last-child {
+aside[aria-label="Navegação lateral"] > div:last-child p {
   font-size: 13px;
   color: rgba(255, 255, 255, 0.6);
   line-height: 1.4;
 }
 
-main {
+main#main-content {
   margin-left: 260px;
-  margin-right: 380px;
+  margin-right: 340px;
   flex: 1;
   display: flex;
   flex-direction: column;
-  background-color: var(--color-background);
+  padding: var(--space-48);
+  gap: var(--space-32);
   min-height: 100vh;
-  padding: 40px 48px;
-  gap: 32px;
+  box-sizing: border-box;
 }
 
-main > header {
+main#main-content > header {
   display: flex;
   flex-direction: column;
-  gap: 8px;
+  gap: var(--space-8);
 }
 
-main > header > p:first-child {
+main#main-content > header p:first-child {
   font-size: 12px;
   font-weight: 700;
   color: var(--color-secondary);
+  letter-spacing: 1px;
   text-transform: uppercase;
-  letter-spacing: 0.5px;
 }
 
-main > header h1 {
+main#main-content > header h1 {
   font-family: var(--font-heading);
-  font-size: 32px;
+  font-size: 28px;
   color: var(--color-primary);
-  line-height: 1.2;
 }
 
-main > header > p:last-child {
+main#main-content > header p:last-child {
   font-size: 15px;
-  color: var(--color-secondary);
+  color: rgba(36, 49, 43, 0.7);
 }
 
-main > section[aria-labelledby="history-title"] {
+main#main-content > section[aria-labelledby="history-title"] {
   display: flex;
   flex-direction: column;
-  gap: 20px;
+  gap: var(--space-16);
 }
 
-main > section[aria-labelledby="history-title"] > h2 {
+main#main-content > section[aria-labelledby="history-title"] > h2 {
   font-family: var(--font-heading);
   font-size: 20px;
   color: var(--color-primary);
-  margin-bottom: 4px;
+  margin-bottom: var(--space-8);
 }
 
-main > section[aria-labelledby="history-title"] article {
+main#main-content > section[aria-labelledby="history-title"] article {
   background-color: var(--color-surface);
   border-radius: var(--radius-16);
-  padding: 20px 24px;
+  padding: var(--space-24);
   box-shadow: var(--shadow-sm);
   border: var(--border-width-1) solid rgba(36, 49, 43, 0.08);
-  display: flex;
+  display: grid;
+  grid-template-columns: 80px 1fr auto auto auto;
   align-items: center;
-  justify-content: space-between;
-  gap: 20px;
+  gap: var(--space-24);
   transition: transform var(--transition-fast), box-shadow var(--transition-fast);
 }
 
-main > section[aria-labelledby="history-title"] article:hover {
-  transform: translateY(-2px);
+main#main-content > section[aria-labelledby="history-title"] article:hover {
   box-shadow: var(--shadow-md);
 }
 
-main > section[aria-labelledby="history-title"] article figure {
-  width: 72px;
-  height: 72px;
+main#main-content > section[aria-labelledby="history-title"] article figure {
+  width: 80px;
+  height: 80px;
   border-radius: var(--radius-8);
   overflow: hidden;
   background-color: var(--color-background);
   flex-shrink: 0;
 }
 
-main > section[aria-labelledby="history-title"] article figure img {
+main#main-content > section[aria-labelledby="history-title"] article figure img {
   width: 100%;
   height: 100%;
   object-fit: cover;
-  display: block;
 }
 
-main > section[aria-labelledby="history-title"] article > div:nth-of-type(1) {
-  flex: 1;
+main#main-content > section[aria-labelledby="history-title"] article > div:nth-of-type(1) {
   display: flex;
   flex-direction: column;
-  gap: 4px;
+  gap: var(--space-4);
 }
 
-main > section[aria-labelledby="history-title"] article h3 {
+main#main-content > section[aria-labelledby="history-title"] article > div:nth-of-type(1) h3 {
   font-family: var(--font-heading);
   font-size: 16px;
   color: var(--color-primary);
 }
 
-main > section[aria-labelledby="history-title"] article > div:nth-of-type(1) p {
-  font-size: 13px;
-  color: var(--color-secondary);
-  line-height: 1.4;
+main#main-content > section[aria-labelledby="history-title"] article > div:nth-of-type(1) p {
+  font-size: 14px;
+  color: rgba(36, 49, 43, 0.7);
+  display: -webkit-box;
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
 }
 
-main > section[aria-labelledby="history-title"] article > div:nth-of-type(2) {
+main#main-content > section[aria-labelledby="history-title"] article > div:nth-of-type(2) {
   display: flex;
   flex-direction: column;
-  align-items: flex-start;
-  gap: 6px;
-  min-width: 130px;
+  gap: var(--space-4);
+  white-space: nowrap;
 }
 
-main > section[aria-labelledby="history-title"] article > div:nth-of-type(2) span {
-  font-size: 12px;
-  font-weight: 700;
+main#main-content > section[aria-labelledby="history-title"] article > div:nth-of-type(2) span {
+  font-size: 13px;
+  font-weight: 600;
   padding: 4px 10px;
   border-radius: var(--radius-4);
-  display: inline-block;
-}
-
-main > section[aria-labelledby="history-title"] article:nth-of-type(1) span {
-  background-color: rgba(184, 216, 107, 0.25);
+  background-color: rgba(33, 77, 56, 0.1);
   color: var(--color-secondary);
+  width: fit-content;
 }
 
-main > section[aria-labelledby="history-title"] article:nth-of-type(2) span,
-main > section[aria-labelledby="history-title"] article:nth-of-type(3) span {
-  background-color: rgba(33, 77, 56, 0.12);
-  color: var(--color-secondary);
-}
-
-main > section[aria-labelledby="history-title"] article:nth-of-type(4) span {
-  background-color: rgba(245, 158, 11, 0.15);
-  color: #B45309;
-}
-
-main > section[aria-labelledby="history-title"] article:nth-of-type(5) span {
-  background-color: rgba(239, 68, 68, 0.12);
-  color: #DC2626;
-}
-
-main > section[aria-labelledby="history-title"] article time {
-  font-size: 12px;
+main#main-content > section[aria-labelledby="history-title"] article > div:nth-of-type(2) time {
+  font-size: 13px;
   color: rgba(36, 49, 43, 0.6);
   display: flex;
   align-items: center;
   gap: 6px;
 }
 
-main > section[aria-labelledby="history-title"] article > div:nth-of-type(3) {
+main#main-content > section[aria-labelledby="history-title"] article > div:nth-of-type(3) {
   display: flex;
   flex-direction: column;
-  align-items: flex-end;
-  gap: 2px;
-  min-width: 100px;
+  gap: var(--space-4);
+  text-align: right;
+  white-space: nowrap;
 }
 
-main > section[aria-labelledby="history-title"] article > div:nth-of-type(3) span:first-child {
+main#main-content > section[aria-labelledby="history-title"] article > div:nth-of-type(3) span:first-child {
   font-size: 12px;
   color: rgba(36, 49, 43, 0.6);
   text-transform: uppercase;
-  letter-spacing: 0.5px;
+  font-weight: 700;
 }
 
-main > section[aria-labelledby="history-title"] article > div:nth-of-type(3) span:last-child {
-  font-family: var(--font-heading);
+main#main-content > section[aria-labelledby="history-title"] article > div:nth-of-type(3) span:last-child {
   font-size: 16px;
+  font-weight: 700;
   color: var(--color-primary);
 }
 
-main > section[aria-labelledby="history-title"] article button {
+main#main-content > section[aria-labelledby="history-title"] article button {
   background-color: var(--color-background);
-  color: var(--color-primary);
-  border: var(--border-width-1) solid rgba(36, 49, 43, 0.2);
+  color: var(--color-secondary);
+  border: var(--border-width-1) solid rgba(33, 77, 56, 0.2);
   padding: 10px 16px;
   border-radius: var(--radius-8);
   font-weight: 600;
-  font-size: 13px;
+  font-size: 14px;
   display: flex;
   align-items: center;
   gap: 8px;
-  transition: background-color var(--transition-fast), border-color var(--transition-fast), color var(--transition-fast);
-  flex-shrink: 0;
+  transition: background-color var(--transition-fast), color var(--transition-fast);
+  white-space: nowrap;
 }
 
-main > section[aria-labelledby="history-title"] article button:hover {
+main#main-content > section[aria-labelledby="history-title"] article button:hover {
   background-color: var(--color-secondary);
   color: var(--color-surface);
-  border-color: var(--color-secondary);
 }
 
-main > section[aria-label="Detalhes do pedido selecionado"] {
+main#main-content > section[aria-label="Detalhes do pedido selecionado"] {
   display: none;
 }
 
 aside[aria-label="Painel complementar"] {
-  width: 360px;
+  width: 320px;
+  background-color: var(--color-surface);
+  border-left: var(--border-width-1) solid rgba(36, 49, 43, 0.08);
+  padding: var(--space-32) var(--space-24);
   position: fixed;
   top: 0;
   right: 0;
   height: 100vh;
-  background-color: var(--color-surface);
-  border-left: var(--border-width-1) solid rgba(36, 49, 43, 0.08);
-  padding: 40px 32px;
-  display: flex;
-  flex-direction: column;
-  gap: 32px;
   overflow-y: auto;
-  z-index: 5;
-}
-
-aside[aria-label="Painel complementar"] > section:first-of-type {
-  background-color: var(--color-primary);
-  color: var(--color-surface);
-  border-radius: var(--radius-16);
-  padding: 24px;
   display: flex;
   flex-direction: column;
-  gap: 12px;
+  gap: var(--space-32);
+  z-index: 10;
   box-shadow: var(--shadow-sm);
 }
 
-aside[aria-label="Painel complementar"] > section:first-of-type figure {
+aside[aria-label="Painel complementar"] > section:first-child {
+  background-color: var(--color-primary);
+  color: var(--color-surface);
+  border-radius: var(--radius-16);
+  padding: var(--space-24);
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-12);
+  text-align: center;
+  align-items: center;
+}
+
+aside[aria-label="Painel complementar"] > section:first-child figure {
   width: 100%;
   height: 140px;
   border-radius: var(--radius-8);
   overflow: hidden;
-  background-color: rgba(255, 255, 255, 0.05);
+  background-color: var(--color-secondary);
 }
 
-aside[aria-label="Painel complementar"] > section:first-of-type figure img {
+aside[aria-label="Painel complementar"] > section:first-child figure img {
   width: 100%;
   height: 100%;
   object-fit: cover;
-  display: block;
 }
 
-aside[aria-label="Painel complementar"] > section:first-of-type h2 {
+aside[aria-label="Painel complementar"] > section:first-child h2 {
   font-family: var(--font-heading);
-  font-size: 20px;
+  font-size: 18px;
   color: var(--color-surface);
-  line-height: 1.2;
 }
 
-aside[aria-label="Painel complementar"] > section:first-of-type p {
+aside[aria-label="Painel complementar"] > section:first-child p {
   font-size: 13px;
-  color: rgba(255, 255, 255, 0.85);
+  color: rgba(255, 255, 255, 0.8);
 }
 
-aside[aria-label="Painel complementar"] > section:first-of-type a {
+aside[aria-label="Painel complementar"] > section:first-child a {
   background-color: var(--color-accent);
   color: var(--color-primary);
   font-weight: 700;
-  padding: 10px 16px;
+  padding: 10px 20px;
   border-radius: var(--radius-8);
-  font-size: 13px;
-  text-align: center;
-  transition: filter var(--transition-fast);
-  margin-top: 4px;
+  font-size: 14px;
+  margin-top: var(--space-8);
+  transition: background-color var(--transition-fast);
+  display: inline-block;
 }
 
-aside[aria-label="Painel complementar"] > section:first-of-type a:hover {
-  filter: brightness(0.95);
+aside[aria-label="Painel complementar"] > section:first-child a:hover {
+  background-color: #a4c45b;
 }
 
 aside[aria-label="Painel complementar"] > section[aria-labelledby="summary-title"] {
   background-color: var(--color-background);
   border-radius: var(--radius-16);
-  padding: 24px;
+  padding: var(--space-24);
   border: var(--border-width-1) solid rgba(36, 49, 43, 0.08);
   display: flex;
   flex-direction: column;
-  gap: 20px;
+  gap: var(--space-16);
 }
 
 aside[aria-label="Painel complementar"] > section[aria-labelledby="summary-title"] h2 {
   font-family: var(--font-heading);
-  font-size: 18px;
+  font-size: 16px;
   color: var(--color-primary);
 }
 
 aside[aria-label="Painel complementar"] > section[aria-labelledby="summary-title"] > div:first-of-type {
   display: flex;
   flex-direction: column;
-  gap: 16px;
+  gap: var(--space-16);
 }
 
 aside[aria-label="Painel complementar"] > section[aria-labelledby="summary-title"] > div:first-of-type > div {
   display: flex;
   align-items: center;
-  gap: 16px;
+  gap: var(--space-16);
+  background-color: var(--color-surface);
+  padding: var(--space-16);
+  border-radius: var(--radius-8);
+  border: var(--border-width-1) solid rgba(36, 49, 43, 0.06);
 }
 
 aside[aria-label="Painel complementar"] > section[aria-labelledby="summary-title"] > div:first-of-type > div i {
@@ -381,29 +358,29 @@ aside[aria-label="Painel complementar"] > section[aria-labelledby="summary-title
 }
 
 aside[aria-label="Painel complementar"] > section[aria-labelledby="summary-title"] > div:first-of-type > div span:first-child {
-  font-weight: 700;
   font-size: 15px;
+  font-weight: 700;
   color: var(--color-primary);
 }
 
 aside[aria-label="Painel complementar"] > section[aria-labelledby="summary-title"] > div:first-of-type > div span:last-child {
-  font-size: 13px;
+  font-size: 12px;
   color: rgba(36, 49, 43, 0.6);
 }
 
 aside[aria-label="Painel complementar"] > section[aria-labelledby="summary-title"] > div:last-of-type {
-  background-color: rgba(184, 216, 107, 0.15);
-  border-radius: var(--radius-8);
-  padding: 16px;
   display: flex;
-  gap: 12px;
   align-items: flex-start;
+  gap: var(--space-12);
+  background-color: rgba(184, 216, 107, 0.15);
+  padding: var(--space-16);
+  border-radius: var(--radius-8);
   border: var(--border-width-1) solid rgba(184, 216, 107, 0.3);
 }
 
 aside[aria-label="Painel complementar"] > section[aria-labelledby="summary-title"] > div:last-of-type i {
   color: var(--color-secondary);
-  font-size: 16px;
+  font-size: 18px;
   margin-top: 2px;
 }
 
@@ -413,22 +390,8 @@ aside[aria-label="Painel complementar"] > section[aria-labelledby="summary-title
   line-height: 1.4;
 }
 
-body > a:first-child {
-  position: absolute;
-  top: -40px;
-  left: 0;
-  background: var(--color-primary);
-  color: var(--color-surface);
-  padding: 8px;
-  z-index: 100;
-}
-
-body > a:first-child:focus {
-  top: 0;
-}
-
-@media (max-width: 1200px) {
-  main {
+@media (max-width: 1280px) {
+  main#main-content {
     margin-right: 0;
   }
 
@@ -439,12 +402,16 @@ body > a:first-child:focus {
     border-left: none;
     border-top: var(--border-width-1) solid rgba(36, 49, 43, 0.08);
   }
+
+  body {
+    flex-direction: column;
+  }
 }
 
 @media (max-width: 1024px) {
   aside[aria-label="Navegação lateral"] {
     width: 80px;
-    padding: 24px 12px;
+    padding: var(--space-24) 12px;
   }
 
   aside[aria-label="Navegação lateral"] img,
@@ -463,43 +430,61 @@ body > a:first-child:focus {
     padding: 14px;
   }
 
-  main {
+  main#main-content {
     margin-left: 80px;
-    padding: 32px 24px;
+    padding: var(--space-24) var(--space-16);
+    max-width: 100%;
   }
 }
 
 @media (max-width: 768px) {
   aside[aria-label="Navegação lateral"] {
-    display: none;
+    width: 260px;
+    display: flex;
   }
 
-  main {
+  aside[aria-label="Navegação lateral"] img,
+  aside[aria-label="Navegação lateral"] nav a span,
+  aside[aria-label="Navegação lateral"] > div:last-child {
+    display: block;
+  }
+
+  aside[aria-label="Navegação lateral"] nav a {
+    justify-content: flex-start;
+    padding: 14px var(--space-16);
+  }
+
+  aside[aria-label="Navegação lateral"] > div:first-child {
+    justify-content: flex-start;
+  }
+
+  main#main-content {
     margin-left: 0;
-    padding: 20px 16px;
-    gap: 24px;
-  }
-
-  main > section[aria-labelledby="history-title"] article {
-    flex-direction: column;
-    align-items: flex-start;
-    gap: 16px;
-  }
-
-  main > section[aria-labelledby="history-title"] article figure {
+    padding: var(--space-16) var(--space-12);
     width: 100%;
-    height: 140px;
+    max-width: 100%;
+    overflow-x: hidden;
   }
 
-  main > section[aria-labelledby="history-title"] article > div:nth-of-type(2),
-  main > section[aria-labelledby="history-title"] article > div:nth-of-type(3) {
+  main#main-content > section[aria-labelledby="history-title"] article {
+    grid-template-columns: 1fr;
+    gap: var(--space-16);
+    text-align: left;
+  }
+
+  main#main-content > section[aria-labelledby="history-title"] article figure {
     width: 100%;
+    height: 160px;
+  }
+
+  main#main-content > section[aria-labelledby="history-title"] article > div:nth-of-type(3) {
+    text-align: left;
     flex-direction: row;
     justify-content: space-between;
     align-items: center;
   }
 
-  main > section[aria-labelledby="history-title"] article button {
+  main#main-content > section[aria-labelledby="history-title"] article button {
     width: 100%;
     justify-content: center;
   }
