@@ -389,6 +389,8 @@ aside[aria-label="Painel complementar"] > section[aria-labelledby="summary-title
   line-height: 1.4;
 }
 
+
+
 @media (max-width: 1280px) {
   main#main-content {
     margin-right: 0;
