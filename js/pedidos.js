@@ -41,7 +41,7 @@ document.addEventListener("DOMContentLoaded", () => {
       title: "Pedido #003",
       itemsText: "Frango + batata-doce + salada",
       itemsList: [
-        { name: "Frango + batata-doce + salada", qty: 1, price: 45.80 }
+        { name: "Frango + batata-doce + salada", qty: 1, price: 22.90 }
       ],
       date: "08/04/2025",
       time: "13:20",
