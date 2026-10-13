@@ -78,6 +78,7 @@ document.addEventListener("DOMContentLoaded", () => {
   window.addEventListener("resize", () => {
     if (window.innerWidth > 768 && sidebar.classList.contains("menu-open")) {
       toggleMenu(false);
+      document.body.classList.remove("menu-open-active");
     }
   });
 });

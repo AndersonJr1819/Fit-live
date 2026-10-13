@@ -1,4 +1,4 @@
-@import url(,,/global.css);
+@import url(../global.css);
 
 .menu-toggle {
   display: none;
@@ -35,6 +35,7 @@
     top: 0;
     left: 0;
     width: 260px;
+    max-width: 80vw;
     height: 100dvh;
     z-index: 999;
     transform: translateX(-100%);
